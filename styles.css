@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 80px;
+    background: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar-header {
+    font-size: 24px;
+    color: #1e90ff;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+    padding: 0 5px;
+}
+
+.sidebar ul li {
+    margin: 8px 0;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.3s;
+    padding-left: 10px;
+    position: relative;
+}
+
+.nav-btn i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.nav-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1e90ff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+.nav-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-btn:hover {
+    background: #1e90ff;
+    transform: scale(1.1);
+}
+
+.content {
+    margin-left: 80px;
+    padding: 40px;
+    flex: 1;
+    background: #1a1a1a;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img {
+    width: 400px; /* Nagyobb profilkép */
+    height: 400px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.profile-info {
+    text-align: left;
+    flex: 1;
+    min-width: 300px;
+}
+
+.profile-info h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.profile-info .title {
+    color: #1e90ff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Két oszlop */
+    gap: 15px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.contact-list li:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.contact-list i {
+    color: #1e90ff;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.contact-list a {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-list a:hover {
+    color: #fff;
+}
+
+.contact-list strong {
+    color: #ccc;
+}
+
+.resume-section h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #1e90ff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.description {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+h3 {
+    color: #1e90ff;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span:first-child {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.progress {
+    background: rgba(70, 130, 180, 0.2);
+    border-radius: 5px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: linear-gradient(to right, #1e90ff, #4682b4);
+    height: 100%;
+    border-radius: 5px;
+    width: 0;
+    animation: fillBar 1.5s ease-out forwards;
+}
+
+@keyframes fillBar {
+    to {
+        width: var(--width);
+    }
+}
+
+.skill span:last-child {
+    float: right;
+    font-size: 14px;
+    color: #ccc;
+}
+
+#scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+}
+
+#scrollTop:hover {
+    background: #4682b4;
+}
+
+/* Reszponzivitás */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 50px;
+    }
+
+    .sidebar-header {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        padding-left: 8px;
+    }
+
+    .nav-btn i {
+        margin-right: 6px;
+        font-size: 14px;
+    }
+
+    .content {
+        margin-left: 50px;
+        padding: 20px 10px;
+    }
+
+    .profile-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-info h1 {
+        font-size: 20px;
+    }
+
+    .profile-info .title {
+        font-size: 14px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr; /* Egy oszlop telefonon */
+    }
+
+    .contact-list li {
+        font-size: 14px;
+    }
+
+    .contact-list i {
+        font-size: 16px;
+    }
+
+    .skill {
+        margin-bottom: 20px;
+    }
+
+    .progress {
+        height: 8px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .content {
+        margin-left: 60px;
+        padding: 30px;
+    }
+
+    .profile-img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr; /* Egy oszlop táblagépen */
+    }
+}
+
+@media (min-width: 1921px) {
+    .sidebar {
+        width: 100px;
+    }
+
+    .content {
+        margin-left: 100px;
+        padding: 60px;
+    }
+
+    .profile-img {
+        width: 500px;
+        height: 500px;
+    }
+}
