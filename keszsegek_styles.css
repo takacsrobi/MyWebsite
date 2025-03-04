@@ -139,11 +139,18 @@ body {
 }
 
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
     gap: 25px;
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 50%;
 }
 
 .skill-bubble {
@@ -151,13 +158,12 @@ body {
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s;
 }
 
 .skill-bubble:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
-    background: linear-gradient(45deg, rgba(30, 144, 255, 0.1), rgba(70, 130, 180, 0.1));
 }
 
 .bubble-header {
@@ -167,11 +173,11 @@ body {
     font-weight: 400;
     background: rgba(255, 255, 255, 0.03);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center; /* Középre igazítás */
-    display: flex; /* Flexbox a függőleges középre igazításhoz */
+    text-align: center;
+    display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 54px; /* Egységes magasság a konzisztencia miatt */
+    min-height: 54px;
 }
 
 .bubble-content {
@@ -181,12 +187,13 @@ body {
     color: #ccc;
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    text-align: center; /* Középre igazítás */
+    text-align: center;
 }
 
 .skill-bubble.active .bubble-content {
-    max-height: 110px;
+    max-height: 300px; /* Nagyobb érték, hogy minden tartalom elférjen */
     padding: 17px;
+    overflow-y: hidden; /* Görgetősáv kikapcsolva */
 }
 
 #scrollTop {
@@ -242,14 +249,18 @@ body {
     }
 
     .skills-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 20px;
+    }
+
+    .skills-column {
+        width: 100%;
     }
 
     .bubble-header {
         font-size: 18px;
         padding: 15px;
-        min-height: 48px; /* Kisebb méret telefonon */
+        min-height: 48px;
     }
 
     .bubble-content {
@@ -257,7 +268,7 @@ body {
     }
 
     .skill-bubble.active .bubble-content {
-        max-height: 100px;
+        max-height: 200px; /* Mobilra kisebb érték */
     }
 }
 
@@ -276,8 +287,11 @@ body {
     }
 
     .skills-container {
-        grid-template-columns: repeat(2, 1fr);
         gap: 22px;
+    }
+
+    .skills-column {
+        width: 50%;
     }
 }
 
@@ -301,10 +315,14 @@ body {
         gap: 30px;
     }
 
+    .skills-column {
+        width: 50%;
+    }
+
     .bubble-header {
         font-size: 22px;
         padding: 19px;
-        min-height: 60px; /* Nagyobb méret 4K-n */
+        min-height: 60px;
     }
 
     .bubble-content {
@@ -312,6 +330,6 @@ body {
     }
 
     .skill-bubble.active .bubble-content {
-        max-height: 120px;
+        max-height: 350px; /* Nagyobb kijelzőkre több hely */
     }
 }
