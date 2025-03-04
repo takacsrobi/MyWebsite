@@ -13,7 +13,14 @@ document.querySelectorAll('.nav-btn').forEach(btn => {
 // Buborék lenyitás
 document.querySelectorAll('.skill-bubble').forEach(bubble => {
     bubble.addEventListener('click', () => {
-        bubble.classList.toggle('active');
+        if (bubble.classList.contains('active')) {
+            bubble.classList.remove('active');
+        } else {
+            document.querySelectorAll('.skill-bubble').forEach(b => {
+                b.classList.remove('active');
+            });
+            bubble.classList.add('active');
+        }
     });
 });
 
