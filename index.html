@@ -3,57 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="profil_styles.css">
+    <title>Modern Önéletrajz</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <nav class="sidebar">
-            <a href="takacsrobi.html" class="sidebar-header">TR</a>
+            <div class="sidebar-header">TR</div>
             <ul>
-                <li><a href="profil.html" class="nav-btn" data-tooltip="Profil"><i class="fas fa-user"></i></a></li>
-                <li><a href="munka.html" class="nav-btn" data-tooltip="Munka"><i class="fas fa-briefcase"></i></a></li>
-                <li><a href="oktatas.html" class="nav-btn" data-tooltip="Oktatás"><i class="fas fa-graduation-cap"></i></a></li>
-                <li><a href="keszsegek.html" class="nav-btn" data-tooltip="Készségek"><i class="fas fa-tools"></i></a></li>
+                <li><a href="profil.html" class="nav-btn" data-tooltip="About me"><i class="fas fa-user"></i></a></li>
+                <li><a href="munka.html" class="nav-btn" data-tooltip="Work experience"><i class="fas fa-briefcase"></i></a></li>
+                <li><a href="oktatas.html" class="nav-btn" data-tooltip="Education"><i class="fas fa-graduation-cap"></i></a></li>
+                <li><a href="keszsegek.html" class="nav-btn" data-tooltip="Skills"><i class="fas fa-tools"></i></a></li>
             </ul>
         </nav>
         <main class="content">
-            <section class="about-section">
-                <h1>About Me</h1>
-                <div class="about-content">
-                    <div class="text-image">
-                        <div class="text">
-                            <h2>Introduction</h2>
-                            <p>Hi, I'm Róbert Takács, an enthusiastic software engineering student at Óbuda University. My passion for the world of IT began at a young age, and ever since, I have been continuously exploring and learning new technologies. I enjoy problem-solving and creative challenges.</p>
-                        </div>
-                        <img src="Kep_2.jpg" alt="Bemutatkozás kép" class="about-img">
-                    </div>
-                </div>
-            </section>
-            <section class="about-section">
-                <div class="about-content">
-                    <div class="text-image reverse">
-                        <img src="Hobby.avif" alt="Érdeklődési körök kép" class="about-img">
-                        <div class="text">
-                            <h2>Interests</h2>
-                            <p>In my free time, I enjoy programming and experimenting with new web development techniques. Currently, I'm also exploring the Linux system. Additionally, I love reading tech-related books, especially on cybersecurity and computer networks, going on hikes, and unwinding at the gym on a weekly basis.</p>
+            <div class="profile-section">
+                <div class="profile-content">
+                    <img src="Kep_1.jpg" alt="Profilkép" class="profile-img">
+                    <div class="profile-info">
+                        <h1>Takács Róbert</h1>
+                        <p class="title">Software Engineer Student</p>
+                        <div class="contact-container">
+                            <ul class="contact-list">
+                                <li><i class="fas fa-envelope"></i> <strong>E-mail:</strong>     takacsrobi27@gmail.com</li>
+                                <li><i class="fas fa-phone"></i> <strong>Telefon:</strong> +36 31 784 1502</li>
+                                <li><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tak%C3%A1cs-r%C3%B3bert-8876b0238/" target="_blank">linkedin.com/in/takacsrobi</a></li>
+                                <li><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="https://github.com/takacsrobi" target="_blank">github.com/takacsrobi</a></li>
+                                <li><i class="fas fa-map-marker-alt"></i> <strong>Lakhely:</strong> 9700 Szombathely</li>
+                                <li><i class="fas fa-briefcase"></i> <strong>Munkahely:</strong> 1034 Budapest III. kerület</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="about-section">
-                <div class="about-content">
-                    <div class="text">
-                        <h2>Goals</h2>
-                        <p>My long-term goal is to join an innovative software development team where I can make a real impact through technological solutions. I aim to further develop my skills in cybersecurity and cloud-based systems.</p>
+            </div>
+            <div class="resume-section">
+                <p class="subtitle">2 years experience in IT / currently pursuing a BSc at Óbuda University</p>
+                <p class="description">I've got insight in C# programming, Web development with HTML + CSS + JS, coding SQL and currently grinding Linux.</p>
+                <h3>Skills</h3>
+                <div class="skill">
+                    <span>C#</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="--width: 95%;"></div>
                     </div>
+                    <span>95%</span>
                 </div>
-            </section>
+                <div class="skill">
+                    <span>Web development with HTML, CSS, Javascript</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="--width: 80%;"></div>
+                    </div>
+                    <span>80%</span>
+                </div>
+                <div class="skill">
+                    <span>SQL</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="--width: 90%;"></div>
+                    </div>
+                    <span>90%</span>
+                </div>
+                <div class="skill">
+                    <span>Microsoft Office</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="--width: 99%;"></div>
+                    </div>
+                    <span>99%</span>
+                </div>
+                <div class="skill">
+                    <span>Linux</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="--width: 50%;"></div>
+                    </div>
+                    <span>50%</span>
+                </div>
+                <div class="skill">
+                    <span>German</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="--width: 60%;"></div>
+                    </div>
+                    <span>60%</span>
+                </div>
+                <div class="skill">
+                    <span>English</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="--width: 98%;"></div>
+                    </div>
+                    <span>98%</span>
+                </div>
+                
+            </div>
         </main>
     </div>
     <button id="scrollTop">↑</button>
-    <script src="profil_script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
