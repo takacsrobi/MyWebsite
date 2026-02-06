@@ -509,6 +509,13 @@ footer {
         max-width: 300px;   /* De ne túl óriási */
         height: 250px;      /* Fekvő tájolás mobilon jobban mutat */
     }
+    #scrollTop {
+        bottom: 90px; /* 60px a menü + 30px biztonsági távolság */
+        right: 20px;  /* Kicsit jobban a szélére igazítjuk mobilon */
+        width: 40px;  /* Mobilon lehet picit kisebb a gomb, ha akarod */
+        height: 40px;
+        font-size: 1.2rem;
+    }
 }
 /* --- SCROLL REVEAL ANIMÁCIÓ --- */
 
@@ -529,4 +536,5 @@ footer {
 .grid-item:nth-child(2), .skill-card:nth-child(2) { transition-delay: 0.1s; }
 .grid-item:nth-child(3), .skill-card:nth-child(3) { transition-delay: 0.2s; }
 .grid-item:nth-child(4), .skill-card:nth-child(4) { transition-delay: 0.3s; }
+
 
