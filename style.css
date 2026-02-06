@@ -509,12 +509,26 @@ footer {
         max-width: 300px;   /* De ne túl óriási */
         height: 250px;      /* Fekvő tájolás mobilon jobban mutat */
     }
-    #scrollTop {
-        bottom: 120px !important; /* Jóval feljebb toljuk, a menü fölé */
+   #scrollTop {
+        display: none; /* Alapból rejtve, JS hozza elő */
+        position: fixed;
+        bottom: 110px !important; /* A menüsor (60px) felett bőven */
         right: 20px;
+        z-index: 9999 !important; /* FONTOS: Ez teszi a menü FÖLÉ, hogy ne takarja ki */
         width: 45px;
         height: 45px;
-        z-index: 2000; /* Extra magas réteg, hogy biztosan minden felett legyen */
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Kis árnyék, hogy elváljon a háttértől */
+    }
+
+    /* Biztosítjuk, hogy a sidebar ne legyen nagyobb a kelleténél */
+    .sidebar {
+        z-index: 1000; /* Ez alatt marad a gombnak (ami 9999) */
     }
 }
 /* --- SCROLL REVEAL ANIMÁCIÓ --- */
@@ -536,6 +550,7 @@ footer {
 .grid-item:nth-child(2), .skill-card:nth-child(2) { transition-delay: 0.1s; }
 .grid-item:nth-child(3), .skill-card:nth-child(3) { transition-delay: 0.2s; }
 .grid-item:nth-child(4), .skill-card:nth-child(4) { transition-delay: 0.3s; }
+
 
 
 
