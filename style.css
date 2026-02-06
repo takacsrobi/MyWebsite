@@ -1,0 +1,532 @@
+:root {
+    --bg-dark: #0f1115;
+    --bg-card: #161b22;
+    --primary: #1e90ff;
+    --secondary: #4682b4;
+    --text-main: #e6edf3;
+    --text-muted: #8b949e;
+    --sidebar-width: 80px;
+    --max-width-4k: 1600px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: var(--sidebar-width);
+    background: #050505;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    z-index: 1000;
+    border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    font-size: 1.4rem;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+    background: rgba(30, 144, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    color: var(--primary);
+}
+
+/* --- FŐ TARTALOM KERET --- */
+.content {
+    margin-left: var(--sidebar-width);
+}
+
+/* ÁLTALÁNOS SZEKCIÓ BEÁLLÍTÁSOK (JAVÍTVA: nincs fix magasság) */
+section {
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: var(--max-width-4k);
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    background: linear-gradient(90deg, var(--primary), #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* --- HERO (Kezdőlap) --- */
+/* CSAK EZ TELJES KÉPERNYŐS */
+.hero-section {
+    min-height: 100vh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.hero-text {
+    flex: 1; /* Ez biztosítja, hogy kitöltse a rendelkezésre álló helyet */
+    padding-left: 5vw; /* EZ AZ ÚJ SOR: Ez tolja beljebb ízlésesen (kb. 5%-kal) */
+}
+
+/* Ez marad a régi, csak ellenőrzésképp itt hagyom a kontextust */
+.hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+/* Ez marad a régi, csak ellenőrzésképp itt hagyom a kontextust */
+.hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.hero-text {
+    flex: 1; /* Ez biztosítja, hogy kitöltse a rendelkezésre álló helyet */
+    padding-left: 5vw; /* EZ AZ ÚJ SOR: Ez tolja beljebb ízlésesen (kb. 5%-kal) */
+}
+
+/* Ez marad a régi, csak ellenőrzésképp itt hagyom a kontextust */
+.hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.hero-text {
+    flex: 1; /* Ez biztosítja, hogy kitöltse a rendelkezésre álló helyet */
+    padding-left: 5vw; /* EZ AZ ÚJ SOR: Ez tolja beljebb ízlésesen (kb. 5%-kal) */
+}
+
+/* Ez marad a régi, csak ellenőrzésképp itt hagyom a kontextust */
+.hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.hero-text {
+    flex: 1; /* Ez biztosítja, hogy kitöltse a rendelkezésre álló helyet */
+    padding-left: 5vw; /* EZ AZ ÚJ SOR: Ez tolja beljebb ízlésesen (kb. 5%-kal) */
+}
+
+/* Ez marad a régi, csak ellenőrzésképp itt hagyom a kontextust */
+.hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.hero-text {
+    flex: 1; /* Ez biztosítja, hogy kitöltse a rendelkezésre álló helyet */
+    padding-left: 5vw; /* EZ AZ ÚJ SOR: Ez tolja beljebb ízlésesen (kb. 5%-kal) */
+}
+
+/* Ez marad a régi, csak ellenőrzésképp itt hagyom a kontextust */
+.hero-text h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 30px rgba(30, 144, 255, 0.2);
+    animation: morph 6s ease-in-out infinite;
+}
+
+@keyframes morph {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+.btn-primary {
+    padding: 12px 30px;
+    background: var(--primary);
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.4);
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+    box-shadow: 0 6px 20px rgba(30, 144, 255, 0.6);
+}
+
+/* --- ABOUT (Rólam) --- */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.about-card {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.about-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-card .card-img {
+    width: 280px;       /* Normál szélesség a portrénak */
+    height: 350px;      /* Álló tájolás */
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+/* 2. SZÉLES KÉP STÍLUS (Ez csak az alsó, "wide" osztályú képre vonatkozik) */
+.about-card .card-img.wide {
+    width: 550px;       /* Jóval szélesebb! */
+    height: 320px;      /* Kicsit alacsonyabb, hogy "monitor-szerű" legyen */
+}
+
+.card-text h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* --- WORK & SKILLS GRID --- */
+.grid-container, .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.grid-item, .skill-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.grid-item:hover, .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-color: var(--primary);
+}
+
+.grid-img-wrapper {
+    height: 200px;
+    overflow: hidden;
+}
+
+.grid-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.grid-item:hover .grid-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.grid-content, .skill-card {
+    padding: 1.5rem;
+}
+
+.grid-content h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.grid-content .date { color: var(--primary); font-size: 0.9rem; display: block; margin-bottom: 1rem; }
+
+.skill-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* --- EDUCATION TIMELINE --- */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Nagyobb térköz a dobozok között */
+    max-width: 900px; /* Kicsit szélesebb keret */
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center; /* Középre igazítja a szöveget a képhez képest */
+    gap: 3rem; /* Nagyobb távolság a kép és szöveg között */
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.timeline-img {
+    flex-shrink: 0; /* Ez nagyon fontos, hogy a szöveg ne nyomja össze a képet! */
+}
+
+.timeline-img img {
+    width: 180px;       /* Sokkal nagyobb méret */
+    height: 180px;      /* Négyzetes arány */
+    object-fit: cover;  /* Kitölti a keretet torzítás nélkül */
+    border-radius: 15px; /* Enyhén lekerekített sarkok (kör helyett) */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4); /* Szép árnyék a kép mögé */
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #050505;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.contact-icons {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-icons a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-icons a:hover { color: var(--primary); }
+
+#scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary);
+    border: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+}
+
+/* --- RESZPONZIVITÁS --- */
+
+/* 4K és széles monitorok */
+@media (min-width: 1920px) {
+    :root {
+        --max-width-4k: 1800px;
+    }
+    .hero-text h1 { font-size: 4rem; }
+    .hero-text p { font-size: 1.4rem; }
+    .hero-image img { width: 500px; height: 500px; }
+}
+
+/* Tablet és Mobil (1024px alatt) */
+@media (max-width: 1024px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .about-card, .about-card.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobil (768px alatt) */
+@media (max-width: 768px) {
+    .about-card .card-img, 
+    .about-card .card-img.wide {
+        width: 100%;    /* Telefonon töltse ki a rendelkezésre álló helyet */
+        height: auto;   /* A magasság automatikus legyen */
+        max-width: 350px;
+    }
+    .sidebar {
+        width: 100%;
+        height: 60px;
+        bottom: 0;
+        top: auto;
+        flex-direction: row;
+        padding: 0 2rem;
+        border-right: none;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo { display: none; }
+
+    .nav-links {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .social-links { display: none; }
+
+    .content {
+        margin-left: 0;
+        margin-bottom: 60px;
+    }
+    
+    section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .hero-section {
+        min-height: auto; /* Mobilon nem kell a fix magasság a görgetés miatt */
+        padding-top: 5rem;
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .hero-text h1 { font-size: 2rem; }
+    .timeline-item {
+        flex-direction: column; /* Egymás alá kerüljenek */
+        text-align: center;     /* Középre zárt szöveg */
+        gap: 1.5rem;
+    }
+
+    .timeline-img img {
+        width: 100%;        /* Mobilon legyen szép széles */
+        max-width: 300px;   /* De ne túl óriási */
+        height: 250px;      /* Fekvő tájolás mobilon jobban mutat */
+    }
+}
+/* --- SCROLL REVEAL ANIMÁCIÓ --- */
+
+/* Alapállapot: Átlátszó és 50px-el lejjebb van */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease; /* Szép lassú, 1 másodperces áttűnés */
+}
+
+/* Aktív állapot: Látható és a helyén van */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hogy ne egyszerre jöjjenek be, ha egymás mellett vannak (opcionális finomítás) */
+.grid-item:nth-child(2), .skill-card:nth-child(2) { transition-delay: 0.1s; }
+.grid-item:nth-child(3), .skill-card:nth-child(3) { transition-delay: 0.2s; }
+.grid-item:nth-child(4), .skill-card:nth-child(4) { transition-delay: 0.3s; }
+
