@@ -63,4 +63,22 @@ if (history.scrollRestoration) {
 }
 window.onload = function() {
     window.scrollTo(0, 0);
+
 };
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+}
+
+// 2. Betöltéskor kényszerítjük, hogy a tetejére ugorjon
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
+// 3. Amikor az oldal teljesen betöltött, töröljük a #hash-t az URL-ből (pl. #work)
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+    if (window.location.hash) {
+        // Ez kicseréli az URL-t tisztára az előzményekben anélkül, hogy újratöltené az oldalt
+        history.replaceState(null, null, window.location.pathname);
+    }
+});
