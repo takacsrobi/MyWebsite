@@ -4,106 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Takács Róbert</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <nav class="sidebar">
-            <div class="sidebar-header">TR</div>
-            <ul>
-                <li><a href="profil.html" class="nav-btn" data-tooltip="About me"><i class="fas fa-user"></i></a></li>
-                <li><a href="munka.html" class="nav-btn" data-tooltip="Work experience"><i class="fas fa-briefcase"></i></a></li>
-                <li><a href="oktatas.html" class="nav-btn" data-tooltip="Education"><i class="fas fa-graduation-cap"></i></a></li>
-                <li><a href="keszsegek.html" class="nav-btn" data-tooltip="Skills"><i class="fas fa-tools"></i></a></li>
-            </ul>
-        </nav>
-        <main class="content">
-            <div class="profile-section">
-                <div class="profile-content">
-                    <img src="Kep_1.jpg" alt="Profilkép" class="profile-img">
-                    <div class="profile-info">
-                        <h1>Takács Róbert</h1>
-                        <p class="title">Computer Science Engineering Student</p>
-                        <div class="contact-container">
-                            <ul class="contact-list">
-                                <li><i class="fas fa-envelope"></i> <strong>E-mail:</strong>     takacsrobi27@gmail.com</li>
-                                <li><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/takacsrobi/" target="_blank">linkedin.com/in/takacsrobi</a></li>
-                                <li><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="https://github.com/takacsrobi" target="_blank">github.com/takacsrobi</a></li>
-                                <li><i class="fas fa-map-marker-alt"></i> <strong>Lakhely:</strong> 9700 Szombathely</li>
-                                <li><i class="fas fa-briefcase"></i> <strong>Munkahely:</strong> 1034 Budapest III. kerület</li>
-                            </ul>
-                        </div>
+
+    <nav class="sidebar">
+        <a href="#home" class="logo">TR</a>
+        <ul class="nav-links">
+            <li><a href="#about" title="About me"><i class="fas fa-user"></i></a></li>
+            <li><a href="#work" title="Jobs"><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="#education" title="Education"><i class="fas fa-graduation-cap"></i></a></li>
+            <li><a href="#skills" title="Skils"><i class="fas fa-tools"></i></a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://github.com/takacsrobi" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/takacsrobi/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </nav>
+
+    <main class="content">
+        
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1><span class="highlight">Takács Róbert</span>.</h1>
+                    <h2>Computer Science Engineering Student</h2>
+                    <p>3 yrs IT experience • C# • Web development • IT Operations</p>
+                    <a href="#contact" class="btn-primary">Contact me</a>
+                </div>
+                <div class="hero-image">
+                    <img src="profilkep.jpg" alt="Takács Róbert">
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">About me</h2>
+            <div class="about-container">
+                <div class="about-card">
+                    <img src="aboutme.jpg" alt="Takács Róbert" class="card-img">
+                    <div class="card-text">
+                        <h3>Introduction</h3>
+                        <p>Hi, I'm Róbert Takács, an enthusiastic Computer Science Engineering student at Óbuda University. My passion for the world of IT began at a young age, and ever since, I have been continuously exploring and learning new technologies. I enjoy problem-solving and creative challenges.</p>
+                    </div>
+                </div>
+                <div class="about-card reverse">
+                    <img src="vs.jpg" alt="VS said no" class="card-img wide">
+                    <div class="card-text">
+                        <h3>Interests</h3>
+                        <p>In my free time, I enjoy experimenting with new development techniques. Additionally, I love reading tech-related books, especially on cybersecurity and computer networks, going on hikes, and unwinding at the gym on a weekly basis.</p>
                     </div>
                 </div>
             </div>
-            <div class="resume-section">
-                <p class="subtitle">2 years experience in IT / currently pursuing a BSc at Óbuda University</p>
-                <p class="description">I've got insight in C# programming, web development with HTML + CSS + JS, coding SQL</p>
+        </section>
+
+        <section id="work">
+    <h2 class="section-title">Work Experience</h2>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="grid-img-wrapper">
+                <a href="https://www.szerencsejatek.hu" target="_blank">
+                    <img src="SzerencsejatekZrt.jpg" alt="Szerencsejáték Zrt">
+                </a>
             </div>
-            <!--
-            <div class="resume-section">
-                <p class="subtitle">2 years experience in IT / currently pursuing a BSc at Óbuda University</p>
-                <p class="description">I've got insight in C# programming, web development with HTML + CSS + JS, coding SQL</p>
-                <h3>Skills</h3>
-                <div class="skill">
-                    <span>C#</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="--width: 95%;"></div>
-                    </div>
-                    <span>95%</span>
-                </div>
-                <div class="skill">
-                    <span>Web development with HTML, CSS, Javascript</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="--width: 80%;"></div>
-                    </div>
-                    <span>80%</span>
-                </div>
-                <div class="skill">
-                    <span>SQL</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="--width: 90%;"></div>
-                    </div>
-                    <span>90%</span>
-                </div>
-                <div class="skill">
-                    <span>Microsoft Office</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="--width: 99%;"></div>
-                    </div>
-                    <span>99%</span>
-                </div>
-                <div class="skill">
-                    <span>Linux</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="--width: 50%;"></div>
-                    </div>
-                    <span>50%</span>
-                </div>
-                <div class="skill">
-                    <span>German</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="--width: 60%;"></div>
-                    </div>
-                    <span>A2</span>
-                </div>
-                <div class="skill">
-                    <span>English</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="--width: 98%;"></div>
-                    </div>
-                    <span>C1</span>
-                </div>
+            <div class="grid-content">
+                <h3>Test Automation Intern</h3>
+                <span class="date">February 2026 - Present</span>
+                <p>Szerencsejáték Zrt.</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="grid-img-wrapper">
+                <a href="https://www.danucem.hu" target="_blank">
+                    <img src="Danucem_.jpg" alt="Danucem">
+                </a>
+            </div>
+            <div class="grid-content">
+                <h3>IT Operations Trainee</h3>
+                <span class="date">March 2025 - February 2026</span>
+                <p>Danucem Magyarország Kft.</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="grid-img-wrapper">
+                <a href="https://www.tdk.com" target="_blank">
+                    <img src="tdk.png" alt="TDK">
+                </a>
+            </div>
+            <div class="grid-content">
+                <h3>Interpreter</h3>
+                <span class="date">January 2023 - June 2023</span>
+                <p>TDK Hungary Components Kft.</p>
+            </div>
+            </div>
+        </div>
+        </section>
                 
+        <section id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-img">
+                <a href="https://uni-obuda.hu" target="_blank">
+                    <img src="oe.jpg" alt="Óbuda University">
+                </a>
             </div>
-            -->
-        </main>
+            <div class="timeline-content">
+                <h3>Computer Science Engineering, BSc</h3>
+                <h4>Óbuda University</h4>
+                <p>2023 - Present</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-img">
+                <a href="https://iskola.szent-norbert.hu/" target="_blank">
+                    <img src="premo.png" alt="Premontrei High School">
+                </a>
+            </div>
+            <div class="timeline-content">
+                <h3>General Certificate of Secondary Education</h3>
+                <h4>Premontrei Rendi Szent Norbert Gimnázium</h4>
+                <p>2018 - 2023</p>
+            </div>
+        </div>
     </div>
+</section>
+                                                                                                                                                                                                 
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-cuttlefish"></i>
+                    <h3>C#</h3>
+                    <p>I gained my experience at Óbuda University as well as through private tutoring from a software developer.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML/CSS</h3>
+                    <p>I learned autodidactically from my own resources, so its presence is a relevant project in itself.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>I use it to complement the websites I create.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                    <p>At university, I learned to create queries, filters, and modifications in SQL. We also had some insight into PL/SQL (Oracle SQL).</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-linux"></i>
+                    <h3>Linux</h3>
+                    <p>I took an Operating Systems course, where I leared Linux system administration at an advanced level.</p>
+                </div>
+                 <div class="skill-card">
+                    <i class="fab fa-windows"></i>
+                    <h3>IT Operations</h3>
+                    <p>11 months of working experience</p>
+                </div>
+            </section>
+
+        <footer id="contact">
+            <div class="footer-content">
+                <h3>Contact me</h3>
+                <div class="contact-icons">
+                    <a href="mailto:takacsrobi27@gmail.com"><i class="fas fa-envelope"></i> takacsrobi27@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/takacsrobi/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <p><i class="fas fa-map-marker-alt"></i> Budapest III.ker | 9700 Szombathely</p>
+                </div>
+                <p class="copyright">&copy; 2026 Takács Róbert</p>
+            </div>
+        </footer>
+
+    </main>
+
     <button id="scrollTop">↑</button>
     <script src="script.js"></script>
 </body>
 </html>
-
-
